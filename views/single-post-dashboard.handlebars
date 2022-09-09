@@ -2,16 +2,16 @@
     <h2 class="single-post-dashboard-h2">Edit Post</h2>
     <form class="update-form">
         <input type="hidden" id="idvalue" value="{{blogs.id}}"/>
-        <div>
-            <label for="title-update">Title:</label>
-            <input type="text" id="title-update"/>
+        <div class="single-post-dashboard-div">
+            <label class="single-post-dashboard-label" for="title-update">Title:</label>
+            <input type="text" id="title-update" value="{{blogs.title}}"/>
+        </div>
+        <div class="single-post-dashboard-div">
+            <label class="single-post-dashboard-label" for="content-update">Content:</label>
+            <textarea type="text" id="content-update">{{blogs.content}}</textarea>
         </div>
         <div>
-            <label for="content-update">Content:</label>
-            <input type="text" id="content-update"/>
-        </div>
-        <div>
-            <button type="submit">Update Post</button>
+            <button class="single-post-dashboard-btn" type="submit">Update Post</button>
         </div>
     </form>
 </section>
@@ -20,7 +20,7 @@
     <h2 class="single-post-dashboard-h2">Delete Post</h2>
     <form class="delete-form">
         <input type="hidden" id="idValue" value="{{blogs.id}}"/>
-        <button type="submit">Delete Post</button>
+        <button class="single-post-dashboard-btn" type="submit">Delete Post</button>
     </form>
 </section>
 
