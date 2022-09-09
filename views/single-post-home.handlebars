@@ -1,0 +1,35 @@
+<section>
+        <div>
+            <header>{{blog.title}}</header>
+            <p>Created by: {{blog.user.username}} on {{blog.createdAt}}</p>
+        </div>
+        <div>
+            <p>{{blog.content}}</p>
+        </div>
+</section>
+
+
+{{#each blog.comments as |comment|}}
+<section>
+    <a href="/hompage/blog/comment/{{comment.id}}">
+        <header>Commented by: {{comment.user.username}} at {{comment.createdAt}}</header>
+        <p>{{comment.comment_text}}</p>
+    </a>
+</section>
+{{/each}}
+
+<section>
+    <h2>Add Comment</h2>
+    <form class="add-comment-form">
+        <div>
+            <label for="comment_text-add-comment">Text:</label>
+            <input type="text" id="comment_text-add-comment"/>
+            <input type="hidden" id="blog_id" value="{{blog.id}}"/>
+        </div>
+        <div>
+            <button type="submit">submit</button>
+      </div>
+    </form>
+</section>
+
+<script src="../../js/addComment.js"></script>

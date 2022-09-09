@@ -1,0 +1,23 @@
+<section>
+    <h2>Edit your comment below</h2>
+    <form class="edit-comment-form">
+        <input type="hidden" id="idvalue" value="{{comment.id}}"/>
+        <input type="hidden" id="blogId" value="{{comment.blog_id}}"/>
+        <div>
+            <label for="edit-comment_text">Text:</label>
+            <input type="text" id="edit-comment_text"/>
+        </div>
+        <div>
+            <button type="submit">Update comment</button>
+        </div>
+    </form>
+    <h2>Delete your comment?</h2>
+    <form class="delete-comment-form">
+        <input type="hidden" id="idValue" value="{{comment.id}}"/>
+        <input type="hidden" id="blog_Id" value="{{comment.blog_id}}"/>
+        <button type="submit">Delete comment</button>
+    </form>
+</section>
+
+<script src="../../../js/updateComment.js"></script>
+<script src="../../../js/deleteComment.js"></script>

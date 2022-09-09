@@ -1,0 +1,25 @@
+<section>
+    <h2>Edit Post</h2>
+    <form class="update-form">
+        <input type="hidden" id="idvalue" value="{{blogs.id}}"/>
+        <div>
+            <label for="title-update">Title:</label>
+            <input type="text" id="title-update"/>
+        </div>
+        <div>
+            <label for="content-update">Content:</label>
+            <input type="text" id="content-update"/>
+        </div>
+        <div>
+            <button type="submit">Update Post</button>
+        </div>
+    </form>
+
+    <form class="delete-form">
+        <input type="hidden" id="idValue" value="{{blogs.id}}"/>
+        <button type="submit">Delete Post</button>
+    </form>
+</section>
+
+<script src="../../js/updatePost.js"></script>
+<script src="../../js/deletePost.js"></script>
