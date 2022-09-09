@@ -1,0 +1,52 @@
+/* nav bar  */
+nav {
+    display: flex;
+    align-items: baseline;
+    background-color: black;
+    color: whitesmoke;
+    justify-content: end;
+}
+
+nav p {
+    width: 50%;
+    margin-left: 1em;
+    font-size: 3em;
+}
+
+nav a {
+    width: 16.6%;
+    color: whitesmoke;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* section homepage post */
+.homepage-post {
+    border-style: solid;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.homepage-post-a {
+    color: black;
+    text-decoration: none;
+}
+
+.homepage-post-title {
+    display: flex;
+    align-items: center;
+    background: tan;
+}
+
+.homepage-post-header {
+    flex-grow: 1;
+    font-size: 2em;
+    margin-left: 1em;
+}
+
+.homepage-post-p {
+    align-self: flex-end;
+    font-size: 1.2em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
