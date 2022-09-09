@@ -123,6 +123,11 @@ router.put('/updatePost/:id', async (req, res) => {
 // DELETE post
 router.delete('/deletePost/:id', async (req, res) => {
     try {
+        const comments = await Comment.destroy({
+            where: {
+                blog_id: req.params.id,
+            }
+        });
         const blog = await Blog.destroy({
             where: {
                 id: req.params.id,
@@ -133,8 +138,9 @@ router.delete('/deletePost/:id', async (req, res) => {
             res.status(404).json({ message: "No blog found with that id!" });
             return;
         }
-
+        console.log(comments)
         res.status(200).json(blog)
+        
     } catch (err) {
         res.status(500).json(err);
     }
